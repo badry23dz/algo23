@@ -1,21 +1,18 @@
-let arr1 = [7,4,5,3,9,1];
-let arr2 = [2,9,6,7,1,0];
-let sum1 = 0;
-let arr = arr1.concat(arr2);
-let sum2 = 0;
+let arr1 = [1,2,3,4];
+let arr2 = [3,4,0,5];
+let sum = 0;
 
-for(let i = 0; i < arr1.length; i++){
-  for(let j=0; j < arr2.length; j++){
-    if(arr1[i] === arr2[j]){
-      sum1 += arr1[i] + arr2[j];
-    }
-  }
+
+for (let i = 0; i < arr1.length; i++) {
+  let index1 = arr2.indexOf(arr1[i]);
+  if (index1 === -1)
+  sum += arr1[i]
 }
-  
-for(let i = 0;i < arr.length; i++){
-  sum2 = sum2 + arr[i]
+console.log(sum)
+
+for (let i = 0; i < arr2.length; i++) {
+  let index2 = arr1.indexOf(arr2[i]);
+  if (index2 === -1)
+  sum += arr2[i]
 }
-
-const sum = sum2 - sum1;
-
-console.log(sum);
+console.log(sum)
